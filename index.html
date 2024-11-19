@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mathan Palanisamy - Portfolio</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header class="navbar">
+    <div class="logo">Mathan</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-item" onclick="showSection('home')">Home</a></li>
+        <li><a href="#about" class="nav-item" onclick="showSection('about')">About</a></li>
+        <li><a href="#experience" class="nav-item" onclick="showSection('experience')">Experience</a></li>
+        <li><a href="#certifications" class="nav-item" onclick="showSection('certifications')">Certifications</a></li>
+        <li><a href="#projects" class="nav-item" onclick="showSection('projects')">Projects</a></li>
+        <li><a href="#education" class="nav-item" onclick="showSection('education')">Education</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sections -->
+  <section id="home" class="section">
+    <h1>Mathan P</h1>
+    <h2>Full Stack Developer</h2>
+    <p>Bangalore, Karnataka, India</p>
+    <br>
+    <ul class="contact-info">
+      <li><a href="mailto:pmathan2001@gmail.com">E-mail</a></li>
+      <li><a href="tel:+919514487354">PhoneNo</a></li>
+      <li><a href="https://www.linkedin.com/in/mathanpalanisamy/">LinkedIn</a></li>
+      <li><a href="https://drive.google.com/file/d/1Re8T6nbU82gm-BjiWjvB2y5YUoDDlng3/view?usp=sharing">Resume</a></li>
+    </ul>
+  </section>
+
+  <section id="about" class="section hidden">
+    <h2>About Me</h2>
+  
+      <ul>
+        <li>Motivated entry-level Software Engineer with expertise in web technologies, Java, and MySQL.</li>
+        <li>Skilled in building dynamic web applications using Angular and Spring Boot.</li>
+        <li>Proven problem-solver with a collaborative mindset and eager
+          to learn and contribute effectively to team projects.</li>
+      </ul>
+      
+      
+    
+  </section>
+
+  <section id="experience" class="section hidden">
+    <h2>Experience - Intern</h2>
+    <p><strong>Mphasis</strong> | July 2024 – Oct 2024, Bangalore</p>
+    <br>
+    <ul>
+      <li>Built responsive web apps with Angular, enhancing user experience.</li>
+      <li>Integrated Spring Boot for efficient backend services.</li>
+      <li>Used JSP for seamless server-side rendering.</li>
+      <li>Managed MySQL databases, focusing on optimization and performance.</li>
+      <li>Led the Employee Payroll Application project with secure <br>authentication and role-based access.</li>
+      <li>Developed with Angular and Spring Boot for seamless data flow and reliable data persistence.</li>
+    </ul>
+  </section>
+
+  <section id="education" class="section hidden">
+    <h2>Education</h2>
+    <p><strong>B.E. in Electrical & Electronics</strong></p>
+    <p>K.S. Rangasamy College of Technology, 2022 | GPA: 7.89/10</p>
+  </section>
+
+  <section id="certifications" class="section hidden">
+    <h2>Certifications</h2>
+    <ul class="certification-list">
+      <li><a href="#">CSS Flexbox Certification - Udemy</a></li>
+      <li><a href="https://drive.google.com/file/d/1OmZpEy2ZbK0Zd67DwbQtQBowJBvhwmWP/view?usp=sharing">Java Full Stack
+          Web Development - Jspiders</a></li>
+      <li><a href="https://coursera.org/share/bb8363f6a33579885f0ade6e0bfd3d69">SQL Developer - Coursera</a></li>
+    </ul>
+  </section>
+
+  <section id="projects" class="section hidden">
+    <h2>Projects</h2>
+    <div class="project-card">
+      <h3>Employee Payroll System</h3>
+      <p><strong>Technologies:</strong> Angular, Spring Boot, MySQL</p>
+      <p>Developed a payroll system with authentication and role-based access.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Mathan Palanisamy. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Show only the clicked section and hide others
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => section.classList.add('hidden'));
+      document.getElementById(sectionId).classList.remove('hidden');
+    }
+
+    // Smooth scrolling effect
+    document.querySelectorAll('.nav-item').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetSection = document.querySelector(this.getAttribute('href'));
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+
+</html>

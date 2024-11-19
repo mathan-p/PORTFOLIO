@@ -1,0 +1,181 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f6f6f6;
+  color: #2c3e50;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px; /* Adjust for sticky navbar */
+}
+
+ul {
+  list-style-type: none; /* Remove bullet points */
+}
+
+/* Header Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  width: auto;
+  background-color: #34495e;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.nav-links a:hover {
+  color: #f39c12;
+  transform: scale(1.1);
+}
+
+/* Section Styles */
+.section {
+  padding: 60px 40px;
+  text-align: center;
+  background-color: white;
+  margin: 20px auto;
+  max-width: 700px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section.hidden {
+  display: none;
+  width: auto;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #34495e;
+}
+
+/* Certification Links */
+.certification-list a {
+  text-decoration: none;
+  color: #2980b9;
+  transition: color 0.3s;
+}
+
+.certification-list a:hover {
+  color: #3498db;
+}
+
+/* Footer */
+footer {
+  margin-top: auto; /* Push footer to the bottom */
+  text-align: center;
+  padding: 15px;
+  background-color: #34495e;
+  color: white;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Mobile View (max-width: 480px) */
+@media (max-width: 480px) {
+  body {
+    padding-top: 50px; /* Adjust navbar padding for mobile */
+  }
+
+  .navbar {
+    flex-direction: row;
+    padding: 5px 10px;
+    align-items:flex-start;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    gap: 7px;
+    width: 100%;
+  }
+
+  .nav-links a {
+    font-size: 0.7rem;
+    width: 100%;
+    text-align: left;
+    padding: 8px 0;
+  }
+
+  .section {
+    padding: 30px 20px;
+    margin-top: 16.5%;
+    max-width: 100%;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-info a {
+    text-decoration: none;
+    color: #e37b3e;
+  }
+}
+
+/* Desktop View (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 40px;
+    /* width: auto; */
+  }
+
+  .nav-links {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .section {
+    padding: 60px 40px;
+  
+    max-width: 100%;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .logo {
+    font-size: 2rem;
+  }
+
+  .contact-info a {
+    text-decoration: none;
+    color: #e37b3e;
+  }
+}
